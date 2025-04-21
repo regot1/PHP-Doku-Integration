@@ -17,8 +17,12 @@ Doku Integration di website Jasa Pembuatan Website dengan transaksi berisi Form 
    ```bash
    [asd](https://developers.doku.com/accept-payment/doku-checkout)
    
-3. Screenshot System 
+3. Screenshot System
+   Halaman Pembelian
    ![Deskripsi alternatif](images/hal_pembelian.JPG)
+   Halaman Staging Doku
+   ![Deskripsi alternatif](images/snap_doku.JPG)
+   
    
 
 
