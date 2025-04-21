@@ -9,23 +9,17 @@ Doku Integration di website Jasa Pembuatan Website dengan transaksi berisi Form 
 - Contoh process flow & test credentials
 
 ## 🚀 Quick Start
-1. Clone repo  
+1. Persiapan  
+   Pastikan Sudah Memiliki akun DOKU
+   Persiapkapkan
+   Merchant ID dan Shared Key Anda
+   Baca Lebih lengkap Doku Dokumentasi
    ```bash
-   git clone https://github.com/USERNAME/doku-payment-demo.git
-   cd doku-payment-demo
-2. 📂 Struktur Direktori
-   ```bash
-   doku-payment-demo/ doku-payment-demo/
-├── assets/
-│   ├── css/                 # file CSS
-│   └── images/              # screenshot, logo, dsb.
-├── docs/                    # dokumentasi lebih lengkap, API spec, flowchart, dsb.
-├── src/
-│   ├── html/                # halaman payment HTML
-│   └── php/                 # skrip integrasi DOKU
-├── .gitignore
-├── LICENSE
-3. Screenshot Sistem 
-![Checkout Page](images/hal_pembelian.jpg)
+   [asd](https://developers.doku.com/accept-payment/doku-checkout)
+   
+3. Screenshot System 
+   
+   
+   
 
 
