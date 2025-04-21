@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html style="font-size: 16px;" lang="en"><head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://jokul.doku.com/jokul-checkout-js/v1/jokul-checkout-1.0.0.js"></script>
+    <meta charset="utf-8">
+    <meta name="keywords" content="​We&amp;apos;re here to support">
+    <meta name="description" content="">
+    <title>Pembayaran</title>
+
+
+<style>
+        /* Gaya untuk popup */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+        }
+        .modal-content {
+            background: white;
+            padding: 20px;
+            width: 60%;
+            max-width: 600px;
+            border-radius: 10px;
+            max-height: 80vh;
+            overflow-y: auto;
+            text-align: left;
+        }
+        .close {
+            float: right;
+            font-size: 20px;
+            cursor: pointer;
+        }
+        @media (max-width: 768px) {
+            .modal-content {
+                width: 90%;
+                max-width: 100%;
+                padding: 15px;
+                font-size: 16px;
+            }
+        }
+        
+      #pay-button {
+    border: 3px solid blue; /* Border default biru */
+    background-color: white;
+    color: black;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+#pay-button:hover {
+    background-color: blue; /* Saat hover: background biru */
+    color: white;
+    border-color: blue;
+}
+
+#pay-button:active {
+    background-color: green !important; /* Saat diklik: background hijau */
+    color: white !important;
+    border-color: green !important;
+}
+
+
+    </style>
+
+
+
+    <link rel="stylesheet" href="nicepage.css" media="screen">
+<link rel="stylesheet" href="index.css" media="screen">
+    <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
+    <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
+    <meta name="generator" content="Nicepage 7.3.1, nicepage.com">
+    
+    <link rel="icon" type="image/png" href="images/favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+<link rel="shortcut icon" href="images/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png" />
+<link rel="manifest" href="images/web-app-manifest-192x192.png" />
+    
+    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
+    <link id="u-page-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i">
+    <script type="application/ld+json">{
+		"@context": "http://schema.org",
+		"@type": "Organization",
+		"name": "Site2",
+		"logo": "images/reWEB.png"
+}</script>
+    <meta name="theme-color" content="#478ac9">
+    <meta property="og:title" content="Home">
+    <meta property="og:description" content="">
+    <meta property="og:type" content="website">
+  <meta data-intl-tel-input-cdn-path="intlTelInput/">
+  
+  </head>
+  
+  
+  
+  <body data-home-page="Home.html" data-home-page-title="Home" data-path-to-root="./" data-include-products="false" class="u-body u-xl-mode" data-lang="en"><header class="u-clearfix u-header u-header" id="sec-f56e"><div class="u-clearfix u-sheet u-sheet-1">
+        <a href="https://rewebid.com/" class="u-image u-logo u-image-1" data-image-width="1124" data-image-height="372">
+          <img src="images/reWEB.png" class="u-logo-image u-logo-image-1">
+        </a>
+        <nav class="u-menu u-menu-one-level u-menu-open-right u-offcanvas u-menu-1" data-responsive-from="MD">
+          <div class="menu-collapse u-custom-font u-font-montserrat" style="font-size: 1rem; letter-spacing: 0px; font-weight: 500;">
+            <a class="u-button-style u-custom-active-border-color u-custom-active-color u-custom-border u-custom-border-color u-custom-borders u-custom-hover-border-color u-custom-hover-color u-custom-left-right-menu-spacing u-custom-padding-bottom u-custom-text-active-color u-custom-text-color u-custom-text-hover-color u-custom-top-bottom-menu-spacing u-hamburger-link u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base u-text-palette-1-base" href="#">
+              <svg class="u-svg-link" viewBox="0 0 24 24"><use xlink:href="#menu-hamburger"></use></svg>
+              <svg class="u-svg-content" version="1.1" id="menu-hamburger" viewBox="0 0 16 16" x="0px" y="0px" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g><rect y="1" width="16" height="2"></rect><rect y="7" width="16" height="2"></rect><rect y="13" width="16" height="2"></rect>
+</g></svg>
+            </a>
+          </div>
+          <div class="u-custom-menu u-nav-container">
+            <ul class="u-custom-font u-font-montserrat u-nav u-spacing-30 u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" href="https://rewebid.com/" style="padding: 10px 0px;">Home</a>
+</li><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" href="https://rewebid.com/layanan/?lang=id" style="padding: 10px 0px;">Layanan</a>
+</li><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" href="https://rewebid.com/desain/?lang=id" style="padding: 10px 0px;">Desain</a>
+</li><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" href="https://rewebid.com/konsultasi/?lang=id" style="padding: 10px 0px;">Konsultasi</a>
+</li><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" href="https://rewebid.com/about-us/?lang=id" style="padding: 10px 0px;">Tentang Kami</a>
+</li></ul>
+          </div>
+          <div class="u-custom-menu u-nav-container-collapse">
+            <div class="u-black u-container-style u-inner-container-layout u-opacity u-opacity-70 u-sidenav">
+              <div class="u-inner-container-layout u-sidenav-overflow">
+                <div class="u-menu-close"></div>
+                <ul class="u-align-center u-custom-font u-font-montserrat u-nav u-popupmenu-items u-text-active-palette-1-base u-unstyled u-nav-2"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="https://rewebid.com/">Home</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="https://rewebid.com/layanan/?lang=id">Layanan</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="https://rewebid.com/desain/?lang=id">Desain</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="https://rewebid.com/konsultasi/?lang=id">Konsultasi</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="https://rewebid.com/about-us/?lang=id">Tentang Kami</a>
+</li></ul>
+              </div>
+            </div>
+            <div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
+          </div>
+          <style class="menu-style">@media (max-width: 939px) {
+                    [data-responsive-from="MD"] .u-nav-container {
+                        display: none;
+                    }
+                    [data-responsive-from="MD"] .menu-collapse {
+                        display: block;
+                    }
+                }</style>
+        </nav>
+      </div></header>
+    <section class="u-align-center u-clearfix u-container-align-center u-gradient u-section-1" id="sec-bd9a">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <div class="u-align-center u-container-align-center u-container-style u-expanded-width-xs u-group u-radius-30 u-shape-round u-white u-group-1">
+          <div class="u-container-layout u-container-layout-1">
+            <h4 class="u-custom-font u-font-montserrat u-text u-text-1">Data Pembelian</h4>
+            <div class="u-expanded-width u-form u-form-1">
+              <form action="#" class="u-clearfix u-form-spacing-15 u-form-vertical u-inner-form" source="custom" name="form" style="padding: 0px;" method="post">
+                <div class="u-form-group u-form-name">
+                  <label for="name-4c18" class="u-label">Nama</label>
+                  <input type="text" id="name-4c18" name="name" class="u-border-2 u-border-palette-1-light-3 u-input u-input-rectangle u-palette-1-light-3 u-radius-10" required="">
+                </div>
+                <div class="u-form-email u-form-group">
+                  <label for="email-4c18" class="u-label">Email</label>
+                  <input type="email" id="email-4c18" name="email" class="u-border-2 u-border-palette-1-light-3 u-input u-input-rectangle u-palette-1-light-3 u-radius-10" required="">
+                </div>
+                <div class="u-form-group u-form-phone u-form-group-3">
+                  <label for="phone-4f1b" class="u-label">Phone</label>
+                  <input type="tel" id="phone-4f1b" name="phone" class="u-border-2 u-border-palette-1-light-3 u-input u-input-rectangle u-palette-1-light-3 u-radius u-input-3" required="" data-country-code="id">
+                </div>
+                <div class="u-form-group u-form-select u-form-group-4">
+                  <label for="select-50a8" class="u-label">Paket Pembelian</label>
+                  <div class="u-form-select-wrapper">
+                    <select id="select-50a8" name="Paket" class="u-border-2 u-border-palette-1-light-3 u-input u-input-rectangle u-palette-1-light-3 u-radius u-input-4" required="required">
+                      <option value="Starter" data-calc="">Starter</option>
+                      <option value="Busines" data-calc="">Busines</option>
+                      <option value="Premium" data-calc="">Premium</option>
+                    </select>
+                    <svg class="u-caret u-caret-svg" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="16px" height="16px" viewBox="0 0 16 16" style="fill:currentColor;" xml:space="preserve"><polygon class="st0" points="8,12 2,4 14,4 "></polygon></svg>
+                  </div>
+                </div>
+                <div class="u-form-group u-form-group-5">
+                  <label for="desain" class="u-label">Nama Desain</label>
+                  <input type="text" id="desain" name="desain" class="u-border-2 u-border-palette-1-light-3 u-input u-input-rectangle u-palette-1-light-3 u-radius u-input-5" required="required">
+                </div>
+                    <div class="u-form-group u-form-group-5">
+                  <label for="domain" class="u-label">Nama Domain</label>
+                  <input type="text" id="domain" name="domain" class="u-border-2 u-border-palette-1-light-3 u-input u-input-rectangle u-palette-1-light-3 u-radius u-input-5" required="required">
+                </div>
+                <div class="u-form-group u-form-total-payment">
+        <input type="hidden" id="total-payment" name="total_payment" class="u-border-2 u-border-palette-1-light-3 u-input u-input-rectangle u-palette-1-light-3 u-radius u-input-5" readonly step='1'>
+        </div>
+        <div class="u-form-group u-form-total-payment">
+        <label for="format-total" class="u-custom-font u-font-montserrat u-label">Total Pembayaran</label>
+        <input type="text" id="format-total" name="format-total" class="u-border-2 u-border-palette-1-light-3 u-input u-input-rectangle u-palette-1-light-3 u-radius u-input-5" readonly>
+</div>
+                <div class="u-form-agree u-form-group u-form-group-6">
+                  <label class="u-label"></label>
+                  <input type="checkbox" id="agree-f740" name="agree" class="u-agree-checkbox u-field-input" required="">
+                  <label for="agree-f740" class="u-agree-label u-field-label">Dengan Ini Menyetujui <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-1" href="https://rewebid.com/syarat-dan-ketentuan-layanan/?lang=id" target="_blank" id="">Syarat Dan Ketentuan Pembelian Jasa Pembuatan Website</a>
+                  </label>
+                </div>
+                <div class="u-align-right u-form-group u-form-submit">
+                    <button type="button" id="pay-button" class="u-active-custom-color-1 u-border-3 u-border-palette-1-base u-btn u-btn-round u-btn-submit u-button-style u-hover-palette-1-base u-radius-10 u-white u-btn-2">Pesan Sekarang</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+<script>
+function updatePaymentValue() {
+    const paketHarga = {
+        'Starter': 588000,
+        'Busines': 1188000,
+        'Premium': 2088000,
+        'tes': 10000
+    };
+    const selectElement = document.getElementById('select-50a8');
+    const total = paketHarga[selectElement.value];
+    document.getElementById('total-payment').value = total;
+    document.getElementById('format-total').value = 'Rp ' + total.toLocaleString('id-ID');
+}
+
+// Set nilai default saat halaman dimuat
+window.addEventListener('DOMContentLoaded', updatePaymentValue);
+// Update nilai jika terjadi perubahan pilihan
+document.getElementById('select-50a8').addEventListener('change', updatePaymentValue);
+</script>
+
+
+
+
+<script> // total yang terlihat user
+document.getElementById('select-50a8').addEventListener('change', function() {
+    var package = this.value;
+    var totalPayment = document.getElementById('format-total');
+    
+    // Menghitung total pembayaran berdasarkan pilihan
+ if (package === "Starter") {
+        totalPayment.value = "Rp. 588.000";
+    } else if (package === "Busines") {
+        totalPayment.value = "Rp. 1.188.000";
+    } else if (package === "Premium") {
+        totalPayment.value = "Rp. 2.088.000";
+    } else if (package === "tes") {
+        totalPayment.value = "Rp. 1000";
+    }
+});
+</script>
+
+
+<!-- doku -->
+
+<script>
+document.getElementById('pay-button').addEventListener('click', async function() {
+    try {
+        const formData = {
+            name: document.getElementById('name-4c18').value.trim(),
+            email: document.getElementById('email-4c18').value.trim(),
+            phone: document.getElementById('phone-4f1b').value.trim(),
+            Paket: document.getElementById('select-50a8').value,
+            desain: document.getElementById('desain').value,
+            domain: document.getElementById('domain').value.trim(),
+            total_payment: document.getElementById('total-payment').value
+        };
+
+        // Kirim ke backend
+        const response = await fetch('create_doku_payment.php', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(formData)
+        });
+
+        const result = await response.json();
+
+        if (!result.success) {
+            throw new Error(result.error || 'Pembayaran gagal');
+        }
+
+        // Buka popup Doku
+        loadJokulCheckout(result.checkout_url);
+
+    } catch (error) {
+        console.error('Error:', error);
+        alert('Error: ' + error.message);
+    }
+});
+</script>
+
+
+    <!-- Popup Modal -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeModal">&times;</span>
+            <p><strong>Calon pelanggan Rewebid</strong> harus membaca, memahami, dan menyetujui perjanjian berikut sebelum menggunakan layanan Jasa Pembuatan Website Rewebid.</p>
+            <h4>Syarat dan Ketentuan Umum</h4>
+            <ul>
+                <li>Bersedia membaca dan memahami Syarat dan Ketentuan secara keseluruhan sebelum mendaftar dan mentaatinya setelah mendaftar di Rewebid.</li>
+                <li>Bersedia membaca dan menaati peraturan umum di Rewebid.</li>
+                <li>Segala materi yang berkaitan dengan tulisan, audio, dan file lain yang ditampilkan di website merupakan tanggung jawab pelanggan.</li>
+            </ul>
+            <h4>Kewajiban Pelanggan</h4>
+            <ul>
+                <li>Pihak Rewebid berhak menolak pembuatan website yang mengandung unsur penipuan, judi, SARA, dan pelanggaran hukum.</li>
+                <li>Segala bentuk aktivitas dan konten pada website sepenuhnya menjadi tanggung jawab pelanggan.</li>
+                <li>Pelanggan bertanggung jawab atas hak cipta segala materi yang ditampilkan.</li>
+            </ul>
+            <h4>Paket Hosting</h4>
+            <p>Paket hosting hanya diperuntukkan untuk pengelolaan website dengan web builder Sitepad.</p>
+            <h4>Fitur Hosting:</h4>
+            <ul>
+                <li><strong>Starter:</strong> 2GB Space, 0 Subdomain, PHP, 1 Email</li>
+                <li><strong>Business:</strong> 5GB Space, 1 Subdomain, MySQL, PHP, 3 Email</li>
+                <li><strong>Premium:</strong> 10GB Space, 2 Subdomain, MySQL, PHP, 6 Email</li>
+            </ul>
+            <h4>Domain</h4>
+            <ul>
+                <li>Domain gratis berlaku pada tahun pertama.</li>
+                <li>Domain gratis mencakup ekstensi .com, .web.id, .shop, .or.id, .ac.id, .my.id, .co.id. Sesuai yang dengan Paket Pembelian yang dipilih</li>
+            </ul>
+            <h4>Materi Website</h4>
+            <ul>
+                <li>Pelanggan harus menyediakan materi dalam format yang telah ditentukan.</li>
+                <li>Revisi desain logo hanya berlaku satu kali.</li>
+                <li>Revisi tidak mencakup penambahan fitur atau penggantian desain.</li>
+            </ul>
+            <h4>Pengerjaan Website</h4>
+            <ul>
+                <li>Website diselesaikan dalam 7 hari kerja sesuai masing masing paket dan setelah konten lengkap.</li>
+                <li>Pelanggan mendapatkan tutorial pengelolaan website.</li>
+            </ul>
+            <h4>Revisi</h4>
+            <ul>
+                <li>Revisi hanya berlaku untuk layout konten, perbaikan, atau kesalahan input data.</li>
+                <li>Jumlah revisi disesuaikan dengan paket yang dipilih.</li>
+            </ul>
+            <h4>Garansi</h4>
+            <ul>
+                <li>Garansi berlaku selama masa berlangganan.</li>
+                <li>Garansi mencakup aksesibilitas website, fungsi fitur, dan backup data terakhir.</li>
+                <li>Garansi tidak berlaku jika akun cPanel diberikan ke pihak lain tanpa sepengetahuan Rewebid.</li>
+            </ul>
+            <h4>Pelanggaran</h4>
+            <ul>
+                <li>Pelanggaran terhadap syarat ini akan mendapatkan peringatan keras dan denda Rp500.000.</li>
+                <li>Jika pelanggaran berulang dua kali, layanan akan diberhentikan tanpa pengembalian biaya.</li>
+            </ul>
+            <p><em>Semua syarat dan ketentuan dapat berubah sewaktu-waktu demi kepentingan bersama.</em></p>
+        </div>
+    </div>
+    
+
+
+
+
+       <script>
+        // Ambil elemen
+        const modal = document.getElementById("modal");
+        const openModal = document.getElementById("openModal");
+        const closeModal = document.getElementById("closeModal");
+        
+        // Saat link diklik, tampilkan modal
+        openModal.onclick = function(event) {
+            event.preventDefault(); // Mencegah navigasi
+            modal.style.display = "flex";
+        };
+        
+        // Saat tombol close diklik, sembunyikan modal
+        closeModal.onclick = function() {
+            modal.style.display = "none";
+        };
+        
+        // Klik di luar modal untuk menutupnya
+        window.onclick = function(event) {
+            if (event.target === modal) {
+                modal.style.display = "none";
+            }
+        };
+    </script>
+
+    
+    <footer class="u-align-center-md u-align-center-sm u-align-center-xs u-clearfix u-footer u-white" id="sec-f94d"><div class="u-clearfix u-sheet u-sheet-1">
+        <a href="https://rewebid.com/" class="u-image u-logo u-image-1" data-image-width="1124" data-image-height="372">
+          <img src="images/reWEB.png" class="u-logo-image u-logo-image-1">
+        </a>
+        <p class="u-align-center-lg u-align-center-md u-align-center-xl u-custom-font u-font-montserrat u-text u-text-1"> Copyright © 2025 Rewebid | CV. Empat Bersaudara</p>
+      </div></footer>
+  
+</body></html>
