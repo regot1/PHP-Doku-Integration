@@ -15,18 +15,21 @@ Doku Integration di website Jasa Pembuatan Website dengan transaksi berisi Form 
    Merchant ID dan Shared Key Anda
    Baca Lebih lengkap Doku Dokumentasi
    ```bash
-   [asd](https://developers.doku.com/accept-payment/doku-checkout)
+   (https://developers.doku.com/accept-payment/doku-checkout)
    
 2. Screenshot System
-   Halaman Pembelian
+   - Halaman Pembelian
+     
    ![Deskripsi alternatif](images/hal_pembelian.JPG)
-   Halaman Staging Doku
+   
+   - Halaman Staging Doku
+     
    ![Deskripsi alternatif](images/snap_doku.JPG)
    
  ## License
  
-- **Badge** di atas README (build status, license, PHP version compatibility):  
-  ```markdown
-  ![License](https://img.shields.io/badge/license-MIT-blue.svg)
-  ![PHP](https://img.shields.io/badge/php-%3E%3D8.0-777bb4.svg)
+- Distributed under the XYZ license. See LICENSE for more information.
+  https://github.com/regot1
 
+  ## Jasa Pembuatan Website Rewebid
+  🔗 [Jasa Pembuatan Website](https://rewebid.com/)
